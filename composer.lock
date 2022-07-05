@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1dee70130d9ffb272072253714ccb61e",
+    "content-hash": "9b374bc612ec514b934ef0ef7f2a6f35",
     "packages": [
         {
             "name": "babdev/pagerfanta-bundle",
@@ -2325,16 +2325,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/loic425/sylius-ux.git",
-                "reference": "3649d5687758e7689c8cba80e3bbb9a1d1dafe14"
+                "reference": "511f98a4db936bb5cd0f9d134e7ed7c037923d80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/loic425/sylius-ux/zipball/3649d5687758e7689c8cba80e3bbb9a1d1dafe14",
-                "reference": "3649d5687758e7689c8cba80e3bbb9a1d1dafe14",
+                "url": "https://api.github.com/repos/loic425/sylius-ux/zipball/511f98a4db936bb5cd0f9d134e7ed7c037923d80",
+                "reference": "511f98a4db936bb5cd0f9d134e7ed7c037923d80",
                 "shasum": ""
             },
             "require": {
+                "knplabs/knp-menu-bundle": "^3.2",
                 "pagerfanta/doctrine-orm-adapter": "^3.6",
+                "pagerfanta/twig": "^3.6",
                 "php": "^8.0",
                 "symfony/dependency-injection": "^5.4 || ^6.0",
                 "symfony/http-kernel": "^5.4 || ^6.0",
@@ -2346,7 +2348,6 @@
                 "doctrine/doctrine-bundle": "^2.7",
                 "doctrine/orm": "^2.12",
                 "matthiasnoback/symfony-dependency-injection-test": "^4.3",
-                "pagerfanta/twig": "^3.6",
                 "phpspec/phpspec": "^7.2",
                 "phpunit/phpunit": "^9.5",
                 "sylius/grid-bundle": "^1.12@alpha",
@@ -2383,7 +2384,7 @@
                 "source": "https://github.com/loic425/sylius-ux/tree/main",
                 "issues": "https://github.com/loic425/sylius-ux/issues"
             },
-            "time": "2022-07-05T12:53:38+00:00"
+            "time": "2022-07-05T14:20:20+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -11856,7 +11857,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.2.5",
+        "php": "^8.0",
         "ext-ctype": "*",
         "ext-iconv": "*"
     },

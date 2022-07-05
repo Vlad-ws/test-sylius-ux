@@ -25,4 +25,4 @@ services:
     # please note that last definitions always *replace* previous ones
 
     App\Menu\AdminMenuBuilder:
-        tags: [ {name: 'knp_menu.menu_builder', method: 'createMenu', alias: 'app.admin.main'}]
+        decorates: 'sylius.ux.menu.admin'

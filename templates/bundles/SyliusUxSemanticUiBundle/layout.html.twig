@@ -1,10 +1,7 @@
 {% extends "@!SyliusUxSemanticUi/layout.html.twig" %}
 
-{% block sidebar %}
-    <a class="item" href="/admin" style="padding: 0 0;">
-        <div class="sidebar-logo">
-            <img src="https://placeholderlogo.com/img/placeholder-logo-4.png" class="ui fluid image">
-        </div>
-    </a>
-    {{ knp_menu_render('app.admin.main', {'template': '@SyliusUxSemanticUi/menu/sidebar.html.twig', 'currentClass': 'active'}) }}
+{% block logo %}
+    <div class="sidebar-logo" style="max-width: 150px; margin: 0 auto">
+        <img src="https://placeholderlogo.com/img/placeholder-logo-4.png" class="ui fluid image">
+    </div>
 {% endblock %}

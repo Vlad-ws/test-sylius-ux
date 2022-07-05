@@ -13,18 +13,18 @@ declare(strict_types=1);
 
 namespace App\Menu;
 
-use Knp\Menu\FactoryInterface;
 use Knp\Menu\ItemInterface;
+use Sylius\Ux\Core\Menu\MenuBuilderInterface;
 
-final class AdminMenuBuilder
+final class AdminMenuBuilder implements MenuBuilderInterface
 {
-    public function __construct(private FactoryInterface $factory)
+    public function __construct(private MenuBuilderInterface $menuBuilder)
     {
     }
 
     public function createMenu(array $options): ItemInterface
     {
-        $menu = $this->factory->createItem('root');
+        $menu = $this->menuBuilder->createMenu($options);
 
         $this->addLibrarySubMenu($menu);
 
