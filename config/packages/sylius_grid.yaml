@@ -1,0 +1,8 @@
+sylius_grid:
+    templates:
+        action:
+            create: "@SyliusUxSemanticUi/grid/action/create.html.twig"
+            delete: "@SyliusUxSemanticUi/grid/action/delete.html.twig"
+            update: "@SyliusUxSemanticUi/grid/action/update.html.twig"
+        filter:
+            string: "@SyliusUxSemanticUi/grid/filter/string.html.twig"
