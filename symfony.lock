@@ -67,6 +67,9 @@
             "config/packages/prod/jms_serializer.yaml"
         ]
     },
+    "knplabs/knp-menu-bundle": {
+        "version": "v3.2.0"
+    },
     "loic425/sylius-ux": {
         "version": "dev-main"
     },
