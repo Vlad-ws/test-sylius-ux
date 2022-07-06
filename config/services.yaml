@@ -24,5 +24,13 @@ services:
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
 
+    App\Menu\FirstMenuBuilder:
+        decorates: 'sylius.ux.menu.admin'
+        decoration_priority: 50
+
     App\Menu\AdminMenuBuilder:
         decorates: 'sylius.ux.menu.admin'
+
+    App\Menu\LastMenuBuilder:
+        decorates: 'sylius.ux.menu.admin'
+        decoration_priority: -50

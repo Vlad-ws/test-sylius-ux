@@ -2325,16 +2325,15 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/loic425/sylius-ux.git",
-                "reference": "511f98a4db936bb5cd0f9d134e7ed7c037923d80"
+                "reference": "344987200d95a2d80e4f10ca05022baa183070db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/loic425/sylius-ux/zipball/511f98a4db936bb5cd0f9d134e7ed7c037923d80",
-                "reference": "511f98a4db936bb5cd0f9d134e7ed7c037923d80",
+                "url": "https://api.github.com/repos/loic425/sylius-ux/zipball/344987200d95a2d80e4f10ca05022baa183070db",
+                "reference": "344987200d95a2d80e4f10ca05022baa183070db",
                 "shasum": ""
             },
             "require": {
-                "knplabs/knp-menu-bundle": "^3.2",
                 "pagerfanta/doctrine-orm-adapter": "^3.6",
                 "pagerfanta/twig": "^3.6",
                 "php": "^8.0",
@@ -2347,6 +2346,7 @@
                 "doctrine/collections": "^1.6",
                 "doctrine/doctrine-bundle": "^2.7",
                 "doctrine/orm": "^2.12",
+                "knplabs/knp-menu-bundle": "^3.2",
                 "matthiasnoback/symfony-dependency-injection-test": "^4.3",
                 "phpspec/phpspec": "^7.2",
                 "phpunit/phpunit": "^9.5",
@@ -2384,7 +2384,7 @@
                 "source": "https://github.com/loic425/sylius-ux/tree/main",
                 "issues": "https://github.com/loic425/sylius-ux/issues"
             },
-            "time": "2022-07-05T14:20:20+00:00"
+            "time": "2022-07-06T08:11:42+00:00"
         },
         {
             "name": "monolog/monolog",

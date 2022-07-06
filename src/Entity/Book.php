@@ -16,14 +16,6 @@ use Sylius\Component\Resource\Model\ResourceInterface;
     templates: '@SyliusUxSemanticUi/crud',
     grid: 'app_book'
 )]
-#[SyliusCrudRoutes(
-    alias: 'app.book',
-    path: 'admin/bootstrap/books',
-    section: 'bootstrap',
-    redirect: 'update',
-    templates: 'bootstrap/book',
-    grid: 'app_book',
-)]
 class Book implements ResourceInterface
 {
     #[ORM\Id]
