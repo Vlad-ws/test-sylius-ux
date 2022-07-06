@@ -27,7 +27,7 @@ final class BookGrid extends AbstractGrid implements ResourceAwareGridInterface
     {
         $gridBuilder
             ->addFilter(
-                StringFilter::create('search', ['title'])
+                StringFilter::create('search', ['title', 'authorName'])
                     ->setLabel('sylius.ui.search')
             )
             ->addOrderBy('title', 'asc')
