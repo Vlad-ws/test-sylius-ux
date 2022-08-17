@@ -4,7 +4,9 @@ namespace App\Entity;
 
 use App\Repository\BookRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Sylius\Component\Resource\Action\PlaceHolderAction;
 use Sylius\Component\Resource\Annotation\SyliusCrudRoutes;
+use Sylius\Component\Resource\Annotation\SyliusRoute;
 use Sylius\Component\Resource\Model\ResourceInterface;
 
 #[ORM\Entity(repositoryClass: BookRepository::class)]
@@ -14,7 +16,14 @@ use Sylius\Component\Resource\Model\ResourceInterface;
     section: 'semantic_ui',
     redirect: 'update',
     templates: '@SyliusUxSemanticUi/crud',
-    grid: 'app_book'
+    grid: 'app_book',
+)]
+#[SyliusRoute(
+    name: 'app_semantic_ui_book_index',
+    path: 'admin/semantic_ui/books',
+    section: 'semantic_ui',
+    operation: 'index',
+    controller: PlaceHolderAction::class,
 )]
 class Book implements ResourceInterface
 {
