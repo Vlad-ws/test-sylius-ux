@@ -13,3 +13,15 @@ admin_index:
     path: /admin
     defaults:
         template: 'index.html.twig'
+
+#app_semantic_ui_book_index:
+#    path: admin/semantic_ui/books
+#    controller: Sylius\Component\Resource\Action\PlaceHolderAction
+#    defaults:
+#        _sylius:
+#            section: semantic_ui
+#            operation: index
+#            resource: app.book
+#            template: '@SyliusUxSemanticUi/crud/index.html.twig'
+#            provider: Sylius\Component\Resource\Doctrine\ORM\State\CollectionProvider
+#            grid: app_book
