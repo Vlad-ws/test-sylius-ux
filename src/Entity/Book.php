@@ -7,10 +7,8 @@ use Doctrine\ORM\Mapping as ORM;
 use Sylius\Component\Resource\Action\PlaceHolderAction;
 use Sylius\Component\Resource\Annotation\SyliusCrudRoutes;
 use Sylius\Component\Resource\Annotation\SyliusRoute;
-use Sylius\Component\Resource\Doctrine\Common\State\PersistProcessor;
-use Sylius\Component\Resource\Doctrine\ORM\State\CollectionProvider;
-use Sylius\Component\Resource\Doctrine\ORM\State\ItemProvider;
 use Sylius\Component\Resource\Model\ResourceInterface;
+use Symfony\Component\Validator\Constraints\NotBlank;
 
 #[ORM\Entity(repositoryClass: BookRepository::class)]
 #[SyliusRoute(
@@ -24,8 +22,6 @@ use Sylius\Component\Resource\Model\ResourceInterface;
     redirect: 'app_semantic_ui_book_update',
     resource: 'app.book',
     operation: 'create',
-    provider: ItemProvider::class,
-    processor: PersistProcessor::class,
 )]
 #[SyliusRoute(
     name: 'app_semantic_ui_book_update',
@@ -38,8 +34,6 @@ use Sylius\Component\Resource\Model\ResourceInterface;
     redirect: 'app_semantic_ui_book_update',
     resource: 'app.book',
     operation: 'update',
-    provider: ItemProvider::class,
-    processor: PersistProcessor::class,
 )]
 #[SyliusCrudRoutes(
     alias: 'app.book',
@@ -59,7 +53,6 @@ use Sylius\Component\Resource\Model\ResourceInterface;
     grid: 'app_book',
     resource: 'app.book',
     operation: 'index',
-    provider: CollectionProvider::class
 )]
 class Book implements ResourceInterface
 {
@@ -69,9 +62,11 @@ class Book implements ResourceInterface
     private ?int $id = null;
 
     #[ORM\Column(type: 'string', length: 255)]
+    #[NotBlank]
     private ?String $title = null;
 
     #[ORM\Column(type: 'string', length: 255)]
+    #[NotBlank]
     private ?string $authorName = null;
 
     public function getId(): ?int
