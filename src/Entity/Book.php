@@ -7,6 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Sylius\Component\Resource\Action\PlaceHolderAction;
 use Sylius\Component\Resource\Annotation\SyliusCrudRoutes;
 use Sylius\Component\Resource\Annotation\SyliusRoute;
+use Sylius\Component\Resource\Doctrine\Common\State\PersistProcessor;
 use Sylius\Component\Resource\Doctrine\ORM\State\CollectionProvider;
 use Sylius\Component\Resource\Doctrine\ORM\State\ItemProvider;
 use Sylius\Component\Resource\Model\ResourceInterface;
@@ -20,9 +21,11 @@ use Sylius\Component\Resource\Model\ResourceInterface;
     template: '@SyliusUxSemanticUi/crud/create.html.twig',
     priority: 20,
     section: 'semantic_ui',
+    redirect: 'app_semantic_ui_book_update',
     resource: 'app.book',
     operation: 'create',
-    provider: ItemProvider::class
+    provider: ItemProvider::class,
+    processor: PersistProcessor::class,
 )]
 #[SyliusRoute(
     name: 'app_semantic_ui_book_update',
@@ -32,9 +35,11 @@ use Sylius\Component\Resource\Model\ResourceInterface;
     template: '@SyliusUxSemanticUi/crud/update.html.twig',
     priority: 20,
     section: 'semantic_ui',
+    redirect: 'app_semantic_ui_book_update',
     resource: 'app.book',
     operation: 'update',
-    provider: ItemProvider::class
+    provider: ItemProvider::class,
+    processor: PersistProcessor::class,
 )]
 #[SyliusCrudRoutes(
     alias: 'app.book',
