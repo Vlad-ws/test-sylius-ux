@@ -12,28 +12,10 @@ use Sylius\Component\Resource\Model\ResourceInterface;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
 #[ORM\Entity(repositoryClass: BookRepository::class)]
-#[CreateAction(
-    template: '@SyliusUxSemanticUi/crud/create.html.twig',
-    section: 'semantic_ui',
-    redirect: 'app_semantic_ui_book_update',
-    resource: 'app.book',
-)]
-#[UpdateAction(
-    template: '@SyliusUxSemanticUi/crud/update.html.twig',
-    section: 'semantic_ui',
-    redirect: 'app_semantic_ui_book_update',
-    resource: 'app.book',
-)]
-#[IndexAction(
-    template: '@SyliusUxSemanticUi/crud/index.html.twig',
-    section: 'semantic_ui',
-    grid: 'app_book',
-    resource: 'app.book',
-)]
-#[DeleteAction(
-    section: 'semantic_ui',
-    resource: 'app.book',
-)]
+#[CreateAction(template: '@SyliusUxSemanticUi/crud/create.html.twig', section: 'semantic_ui', resource: 'app.book')]
+#[UpdateAction(template: '@SyliusUxSemanticUi/crud/update.html.twig', section: 'semantic_ui', resource: 'app.book')]
+#[IndexAction(template: '@SyliusUxSemanticUi/crud/index.html.twig', section: 'semantic_ui', grid: 'app_book', resource: 'app.book')]
+#[DeleteAction(section: 'semantic_ui', resource: 'app.book')]
 class Book implements ResourceInterface
 {
     #[ORM\Id]
