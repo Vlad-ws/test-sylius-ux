@@ -4,55 +4,35 @@ namespace App\Entity;
 
 use App\Repository\BookRepository;
 use Doctrine\ORM\Mapping as ORM;
-use Sylius\Component\Resource\Action\PlaceHolderAction;
-use Sylius\Component\Resource\Annotation\SyliusCrudRoutes;
-use Sylius\Component\Resource\Annotation\SyliusRoute;
+use Sylius\Component\Resource\Annotation\DeleteAction;
+use Sylius\Component\Resource\Annotation\CreateAction;
+use Sylius\Component\Resource\Annotation\IndexAction;
+use Sylius\Component\Resource\Annotation\UpdateAction;
 use Sylius\Component\Resource\Model\ResourceInterface;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
 #[ORM\Entity(repositoryClass: BookRepository::class)]
-#[SyliusRoute(
-    name: 'app_semantic_ui_book_create',
-    path: 'admin/semantic_ui/books/new',
-    methods: ['GET', 'POST'],
-    controller: PlaceHolderAction::class,
+#[CreateAction(
     template: '@SyliusUxSemanticUi/crud/create.html.twig',
-    priority: 20,
     section: 'semantic_ui',
     redirect: 'app_semantic_ui_book_update',
     resource: 'app.book',
-    operation: 'create',
 )]
-#[SyliusRoute(
-    name: 'app_semantic_ui_book_update',
-    path: 'admin/semantic_ui/books/{id}/edit',
-    methods: ['GET', 'PUT'],
-    controller: PlaceHolderAction::class,
+#[UpdateAction(
     template: '@SyliusUxSemanticUi/crud/update.html.twig',
-    priority: 20,
     section: 'semantic_ui',
     redirect: 'app_semantic_ui_book_update',
     resource: 'app.book',
-    operation: 'update',
 )]
-#[SyliusCrudRoutes(
-    alias: 'app.book',
-    path: 'admin/semantic_ui/books',
-    section: 'semantic_ui',
-    redirect: 'update',
-    templates: '@SyliusUxSemanticUi/crud',
-    grid: 'app_book',
-    except: ['index', 'create', 'update'],
-)]
-#[SyliusRoute(
-    name: 'app_semantic_ui_book_index',
-    path: 'admin/semantic_ui/books',
-    controller: PlaceHolderAction::class,
+#[IndexAction(
     template: '@SyliusUxSemanticUi/crud/index.html.twig',
     section: 'semantic_ui',
     grid: 'app_book',
     resource: 'app.book',
-    operation: 'index',
+)]
+#[DeleteAction(
+    section: 'semantic_ui',
+    resource: 'app.book',
 )]
 class Book implements ResourceInterface
 {
