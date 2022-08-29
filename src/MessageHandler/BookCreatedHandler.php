@@ -22,12 +22,11 @@ class BookCreatedHandler implements MessageHandlerInterface
         Assert::isInstanceOf($book, Book::class);
 
         $data = [
-            ['Id', 'Title', 'AuthorName'],
             [$book->getId(), $book->getTitle(), $book->getAuthorName()],
         ];
 
         $filename = sys_get_temp_dir().'/books.csv';
-        $f = fopen($filename, 'w');
+        $f = fopen($filename, 'w+');
 
         if ($f === false) {
             die('Error opening the file ' . $filename);

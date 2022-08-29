@@ -13,6 +13,8 @@ services:
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
 
     _instanceof:
+        Sylius\Component\Resource\State\ProviderInterface:
+            tags: [ 'sylius.state_provider' ]
         Sylius\Component\Resource\State\ProcessorInterface:
             tags: ['sylius.state_processor']
 
