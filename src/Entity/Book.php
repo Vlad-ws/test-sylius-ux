@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Action\CreateBookAction;
 use App\Repository\BookRepository;
+use App\State\Processor\CreateBookProcessor;
 use Doctrine\ORM\Mapping as ORM;
 use Sylius\Component\Resource\Metadata\Create;
 use Sylius\Component\Resource\Metadata\Delete;
@@ -13,7 +14,7 @@ use Sylius\Component\Resource\Model\ResourceInterface;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
 #[ORM\Entity(repositoryClass: BookRepository::class)]
-#[Create(read: false, controller: CreateBookAction::class, template: '@SyliusUxSemanticUi/crud/create.html.twig', section: 'semantic_ui', resource: 'app.book')]
+#[Create(read: false, controller: CreateBookAction::class, processor: CreateBookProcessor::class, template: '@SyliusUxSemanticUi/crud/create.html.twig', section: 'semantic_ui', resource: 'app.book')]
 #[Update(template: '@SyliusUxSemanticUi/crud/update.html.twig', section: 'semantic_ui', resource: 'app.book')]
 #[Index(template: '@SyliusUxSemanticUi/crud/index.html.twig', section: 'semantic_ui', grid: 'app_book', resource: 'app.book')]
 #[Delete(section: 'semantic_ui', resource: 'app.book')]

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f0576c342524d14cb2921cc1765beb76",
+    "content-hash": "2e74e140754328e95b2d85f828460122",
     "packages": [
         {
             "name": "babdev/pagerfanta-bundle",
@@ -3387,12 +3387,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/loic425/SyliusResourceBundle.git",
-                "reference": "054e927468a42877be4887ac6aacc1a3f1c3172e"
+                "reference": "50dcb9bfff5753ed9303481c17f6e29b4c0d9830"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/loic425/SyliusResourceBundle/zipball/054e927468a42877be4887ac6aacc1a3f1c3172e",
-                "reference": "054e927468a42877be4887ac6aacc1a3f1c3172e",
+                "url": "https://api.github.com/repos/loic425/SyliusResourceBundle/zipball/50dcb9bfff5753ed9303481c17f6e29b4c0d9830",
+                "reference": "50dcb9bfff5753ed9303481c17f6e29b4c0d9830",
                 "shasum": ""
             },
             "require": {
@@ -3514,7 +3514,7 @@
             "support": {
                 "source": "https://github.com/loic425/SyliusResourceBundle/tree/poc/2.0"
             },
-            "time": "2022-08-29T07:32:23+00:00"
+            "time": "2022-08-29T14:57:51+00:00"
         },
         {
             "name": "symfony/amqp-messenger",
