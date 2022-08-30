@@ -15,7 +15,7 @@ use Sylius\Component\Resource\Model\ResourceInterface;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
 #[ORM\Entity(repositoryClass: BookRepository::class)]
-#[Create(controller: CreateBookAction::class, template: '@SyliusUxSemanticUi/crud/create.html.twig', section: 'semantic_ui', resource: 'app.book', processor: CreateBookProcessor::class, read: false)]
+#[Create(controller: CreateBookAction::class, template: '@SyliusUxSemanticUi/crud/create.html.twig', section: 'semantic_ui', resource: 'app.book', processor: CreateBookProcessor::class)]
 #[Update(template: '@SyliusUxSemanticUi/crud/update.html.twig', section: 'semantic_ui', resource: 'app.book', provider: GetBookProvider::class)]
 #[Index(template: '@SyliusUxSemanticUi/crud/index.html.twig', section: 'semantic_ui', grid: 'app_book', resource: 'app.book')]
 #[Delete(section: 'semantic_ui', resource: 'app.book')]

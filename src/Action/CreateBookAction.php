@@ -8,8 +8,8 @@ use App\Entity\Book;
 
 class CreateBookAction
 {
-    public function __invoke(): Book
+    public function __invoke(Book $data): Book
     {
-        return (new Book())->setTitle('New title');
+        return $data->setTitle('New title');
     }
 }
