@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace App\Action;
 
-use App\Entity\Book;
+use App\Dto\Book;
 
 class CreateBookAction
 {
-    public function __invoke(Book $data): Book
+    public function __invoke(): Book
     {
-        return $data->setTitle('New title');
+        return new Book(title: 'New title');
     }
 }

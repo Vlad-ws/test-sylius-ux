@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Action\CreateBookAction;
+use App\Dto\Book as BookInput;
+use App\Form\BookType;
 use App\Repository\BookRepository;
 use App\State\Processor\CreateBookProcessor;
 use App\State\Provider\GetBookProvider;
@@ -15,7 +17,7 @@ use Sylius\Component\Resource\Model\ResourceInterface;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
 #[ORM\Entity(repositoryClass: BookRepository::class)]
-#[Create(controller: CreateBookAction::class, template: '@SyliusUxSemanticUi/crud/create.html.twig', section: 'semantic_ui', resource: 'app.book', processor: CreateBookProcessor::class)]
+#[Create(controller: CreateBookAction::class, template: '@SyliusUxSemanticUi/crud/create.html.twig', form: BookType::class, section: 'semantic_ui', resource: 'app.book', processor: CreateBookProcessor::class, input: BookInput::class)]
 #[Update(template: '@SyliusUxSemanticUi/crud/update.html.twig', section: 'semantic_ui', resource: 'app.book', provider: GetBookProvider::class)]
 #[Index(template: '@SyliusUxSemanticUi/crud/index.html.twig', section: 'semantic_ui', grid: 'app_book', resource: 'app.book')]
 #[Delete(section: 'semantic_ui', resource: 'app.book')]

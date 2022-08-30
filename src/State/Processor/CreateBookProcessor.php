@@ -4,9 +4,7 @@ declare(strict_types=1);
 
 namespace App\State\Processor;
 
-use App\Entity\Book;
-use App\Message\BookCreated;
-use Doctrine\ORM\EntityManagerInterface;
+use App\Dto\Book;
 use Sylius\Bundle\ResourceBundle\Controller\RequestConfiguration;
 use Sylius\Component\Resource\State\ProcessorInterface;
 use Symfony\Component\Messenger\MessageBusInterface;
@@ -14,7 +12,7 @@ use Webmozart\Assert\Assert;
 
 class CreateBookProcessor implements ProcessorInterface
 {
-    public function __construct(private MessageBusInterface $messageBus, private EntityManagerInterface $entityManager)
+    public function __construct(private MessageBusInterface $messageBus)
     {
     }
 
@@ -23,10 +21,7 @@ class CreateBookProcessor implements ProcessorInterface
     {
         Assert::isInstanceOf($data, Book::class);
 
-        $this->entityManager->persist($data);
-        $this->entityManager->flush();
-
-        $this->messageBus->dispatch(new BookCreated($data->getId()));
+        $this->messageBus->dispatch($data);
 
         return $data;
     }
