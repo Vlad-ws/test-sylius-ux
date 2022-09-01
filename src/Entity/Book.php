@@ -17,10 +17,10 @@ use Sylius\Component\Resource\Model\ResourceInterface;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
 #[ORM\Entity(repositoryClass: BookRepository::class)]
-#[Create(controller: CreateBookAction::class, template: '@SyliusUxSemanticUi/crud/create.html.twig', form: BookType::class, section: 'semantic_ui', resource: 'app.book', processor: CreateBookProcessor::class, input: BookInput::class)]
-#[Update(template: '@SyliusUxSemanticUi/crud/update.html.twig', section: 'semantic_ui', resource: 'app.book', provider: GetBookProvider::class)]
-#[Index(template: '@SyliusUxSemanticUi/crud/index.html.twig', section: 'semantic_ui', grid: 'app_book', resource: 'app.book')]
-#[Delete(section: 'semantic_ui', resource: 'app.book')]
+#[Create(routePrefix: 'semantic_ui', controller: CreateBookAction::class, template: '@SyliusUxSemanticUi/crud/create.html.twig', form: BookType::class, section: 'semantic_ui', resource: 'app.book', processor: CreateBookProcessor::class, input: BookInput::class)]
+#[Update(routePrefix: 'semantic_ui', template: '@SyliusUxSemanticUi/crud/update.html.twig', section: 'semantic_ui', resource: 'app.book', provider: GetBookProvider::class)]
+#[Index(routePrefix: 'semantic_ui', template: '@SyliusUxSemanticUi/crud/index.html.twig', section: 'semantic_ui', grid: 'app_book', resource: 'app.book')]
+#[Delete(routePrefix: 'semantic_ui', section: 'semantic_ui', resource: 'app.book')]
 class Book implements ResourceInterface
 {
     #[ORM\Id]
