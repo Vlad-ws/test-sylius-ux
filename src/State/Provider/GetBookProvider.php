@@ -6,6 +6,7 @@ namespace App\State\Provider;
 
 use App\Entity\Book;
 use Sylius\Bundle\ResourceBundle\Controller\RequestConfiguration;
+use Sylius\Component\Resource\Metadata\Operation;
 use Sylius\Component\Resource\State\ProviderInterface;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
@@ -15,7 +16,7 @@ class GetBookProvider implements ProviderInterface
     {
     }
 
-    public function provide(RequestConfiguration $configuration): Book
+    public function provide(Operation $operation, RequestConfiguration $configuration): Book
     {
         $bookId = $configuration->getRequest()->attributes->getInt('id');
 

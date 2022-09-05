@@ -6,6 +6,7 @@ namespace App\State\Processor;
 
 use App\Dto\Book;
 use Sylius\Bundle\ResourceBundle\Controller\RequestConfiguration;
+use Sylius\Component\Resource\Metadata\Operation;
 use Sylius\Component\Resource\State\ProcessorInterface;
 use Symfony\Component\Messenger\MessageBusInterface;
 use Webmozart\Assert\Assert;
@@ -17,7 +18,7 @@ class CreateBookProcessor implements ProcessorInterface
     }
 
     /** @param Book|mixed $data */
-    public function process(mixed $data, RequestConfiguration $configuration): Book
+    public function process(mixed $data, Operation $operation, RequestConfiguration $configuration): Book
     {
         Assert::isInstanceOf($data, Book::class);
 
