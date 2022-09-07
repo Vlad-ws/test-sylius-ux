@@ -3387,12 +3387,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/loic425/SyliusResourceBundle.git",
-                "reference": "03cd5d685ee7a80a155a13abfa7dc82dbdfe197d"
+                "reference": "6db233a330e8a50a80675c6441d56d6ef5df93ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/loic425/SyliusResourceBundle/zipball/03cd5d685ee7a80a155a13abfa7dc82dbdfe197d",
-                "reference": "03cd5d685ee7a80a155a13abfa7dc82dbdfe197d",
+                "url": "https://api.github.com/repos/loic425/SyliusResourceBundle/zipball/6db233a330e8a50a80675c6441d56d6ef5df93ea",
+                "reference": "6db233a330e8a50a80675c6441d56d6ef5df93ea",
                 "shasum": ""
             },
             "require": {
@@ -3514,7 +3514,7 @@
             "support": {
                 "source": "https://github.com/loic425/SyliusResourceBundle/tree/poc/2.0"
             },
-            "time": "2022-09-05T09:56:46+00:00"
+            "time": "2022-09-07T12:17:00+00:00"
         },
         {
             "name": "symfony/amqp-messenger",
