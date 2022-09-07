@@ -2,25 +2,22 @@
 
 namespace App\Entity;
 
-use App\Action\CreateBookAction;
-use App\Dto\Book as BookInput;
-use App\Form\BookType;
 use App\Repository\BookRepository;
-use App\State\Processor\CreateBookProcessor;
-use App\State\Provider\GetBookProvider;
 use Doctrine\ORM\Mapping as ORM;
 use Sylius\Component\Resource\Metadata\Create;
 use Sylius\Component\Resource\Metadata\Delete;
 use Sylius\Component\Resource\Metadata\Index;
+use Sylius\Component\Resource\Metadata\Resource;
 use Sylius\Component\Resource\Metadata\Update;
 use Sylius\Component\Resource\Model\ResourceInterface;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
 #[ORM\Entity(repositoryClass: BookRepository::class)]
-#[Create(routePrefix: 'semantic_ui', template: '@SyliusUxSemanticUi/crud/create.html.twig', section: 'semantic_ui', resource: 'app.book')]
-#[Update(routePrefix: 'semantic_ui', template: '@SyliusUxSemanticUi/crud/update.html.twig', section: 'semantic_ui', resource: 'app.book')]
-#[Index(routePrefix: 'semantic_ui', template: '@SyliusUxSemanticUi/crud/index.html.twig', section: 'semantic_ui', grid: 'app_book', resource: 'app.book')]
-#[Delete(routePrefix: 'semantic_ui', section: 'semantic_ui', resource: 'app.book')]
+#[Resource(alias: 'app.book')]
+#[Create(routePrefix: 'semantic_ui', template: '@SyliusUxSemanticUi/crud/create.html.twig', section: 'semantic_ui')]
+#[Update(routePrefix: 'semantic_ui', template: '@SyliusUxSemanticUi/crud/update.html.twig', section: 'semantic_ui')]
+#[Index(routePrefix: 'semantic_ui', template: '@SyliusUxSemanticUi/crud/index.html.twig', section: 'semantic_ui', grid: 'app_book')]
+#[Delete(routePrefix: 'semantic_ui', section: 'semantic_ui')]
 class Book implements ResourceInterface
 {
     #[ORM\Id]
