@@ -3387,12 +3387,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/loic425/SyliusResourceBundle.git",
-                "reference": "e5feb1146fb40e4383220489a019ae3701f1d5a8"
+                "reference": "80fc506501d49fc6ab178f89621f5d3bb878c816"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/loic425/SyliusResourceBundle/zipball/e5feb1146fb40e4383220489a019ae3701f1d5a8",
-                "reference": "e5feb1146fb40e4383220489a019ae3701f1d5a8",
+                "url": "https://api.github.com/repos/loic425/SyliusResourceBundle/zipball/80fc506501d49fc6ab178f89621f5d3bb878c816",
+                "reference": "80fc506501d49fc6ab178f89621f5d3bb878c816",
                 "shasum": ""
             },
             "require": {
@@ -3408,6 +3408,7 @@
                 "php": "^8.0",
                 "sylius/registry": "^1.2",
                 "symfony/config": "^5.4 || ^6.0",
+                "symfony/deprecation-contracts": "^2.1 || ^3.0",
                 "symfony/expression-language": "^5.4 || ^6.0",
                 "symfony/form": "^5.4 || ^6.0",
                 "symfony/framework-bundle": "^5.4 || ^6.0",
@@ -3421,9 +3422,6 @@
                 "webmozart/assert": "^1.8",
                 "willdurand/hateoas-bundle": "^2.0",
                 "winzou/state-machine-bundle": "^0.6"
-            },
-            "conflict": {
-                "phpstan/phpdoc-parser": "^1.6.0"
             },
             "replace": {
                 "sylius/resource": "self.version"
@@ -3442,7 +3440,7 @@
                 "phpunit/phpunit": "^9.5",
                 "rector/rector": "^0.13.5",
                 "sylius-labs/coding-standard": "^4.0",
-                "sylius/grid-bundle": "^1.7 || dev-symfony-6",
+                "sylius/grid-bundle": "^1.7 || v1.12.0-ALPHA.1",
                 "symfony/dependency-injection": "^5.4 || ^6.0",
                 "symfony/dotenv": "^5.4 || ^6.0",
                 "symfony/workflow": "^5.4 || ^6.0",
@@ -3476,7 +3474,7 @@
                 "analyse": [
                     "@composer validate --strict",
                     "vendor/bin/ecs check src",
-                    "vendor/bin/phpstan analyse --ansi -c phpstan.neon -l max src"
+                    "vendor/bin/phpstan analyse --ansi --memory-limit=256M -c phpstan.neon -l max src"
                 ],
                 "fix": [
                     "vendor/bin/ecs check src --fix"
@@ -3514,7 +3512,7 @@
             "support": {
                 "source": "https://github.com/loic425/SyliusResourceBundle/tree/poc/2.0"
             },
-            "time": "2022-09-07T15:17:44+00:00"
+            "time": "2022-12-05T09:55:40+00:00"
         },
         {
             "name": "symfony/amqp-messenger",
