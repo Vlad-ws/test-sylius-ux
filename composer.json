@@ -51,12 +51,12 @@
     },
     "repositories": [
         {
-            "type": "vcs",
-            "url":  "git@github.com:loic425/sylius-ux.git"
+            "url": "https://github.com/loic425/SyliusResourceBundle.git",
+            "type": "git"
         },
         {
-            "type": "vcs",
-            "url":  "git@github.com:loic425/SyliusResourceBundle.git"
+            "type": "git",
+            "url":  "https://github.com/loic425/sylius-ux.git"
         }
     ],
     "config": {
