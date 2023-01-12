@@ -1,0 +1,14 @@
+{
+	"name": "Ubuntu",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/base:jammy",
+	"features": {
+		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
+		"ghcr.io/devcontainers/features/node:1": {},
+		"ghcr.io/devcontainers/features/php:1":  {
+            "version": "8.0.16",
+            "installComposer": "true"
+          },
+		"ghcr.io/shyim/devcontainers-features/symfony-cli:0": {}
+	}
+}
